@@ -16,7 +16,7 @@ in
 pkgs.mkShell {
   buildInputs = with pkgs; [
     direnv
-    nvim
+    neovim
     python3.pkgs.numpy
     python3.pkgs.scipy
     python3.pkgs.jupyterlab
