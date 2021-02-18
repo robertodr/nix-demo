@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "{ allowUnfree = true; }" > ~/.config/nixpkgs/config.nix
