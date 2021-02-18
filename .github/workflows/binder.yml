@@ -3,8 +3,7 @@ name: Build Notebook Container
 on:
   push:
     paths:
-      - apt.txt
-      - postBuild
+      - default.nix
       - .github/workflows/binder.yml
 
 jobs:
