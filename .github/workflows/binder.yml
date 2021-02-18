@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - default.nix
+      - postBuild
       - .github/workflows/binder.yml
 
 jobs:
