@@ -3,4 +3,6 @@
 set -e
 
 mkdir -p ~/.config/nixpkgs
-echo "{ allowUnfree = true; }" > ~/.config/nixpkgs/config.nix
+printf "{ allowUnfree = true; }" > ~/.config/nixpkgs/config.nix
+
+printf 'eval "$(direnv hook bash)"' > ~/.bashrc
