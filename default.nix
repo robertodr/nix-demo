@@ -1,5 +1,17 @@
 let
   sources = import ./nix/sources.nix;
+  pkgs = import sources.nixpkgs {
+    overlays = [
+      (self: super: {
+        blas = super.blas.override {
+          blasProvider = self.mkl;
+        };
+        lapack = super.lapack.override {
+          lapackProvider = self.mkl;
+        };
+      })
+    ];
+  };
 in
 pkgs.mkShell {
   buildInputs = with pkgs; [
