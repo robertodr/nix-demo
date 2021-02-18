@@ -30,11 +30,11 @@ pkgs.mkShell {
 
     if [ "$DOCKER_BUILD_PHASE" = true ]; then
       echo "Do some action in build phase"
+      echo "{ allowUnfree = true; }" > ~/.config/nixpkgs/config.nix
     fi
 
     if [ "$DOCKER_BUILD_PHASE" = false ]; then
       echo "Do some action in run phase like start db"
-      echo "{ allowUnfree = true; }" > ~/.config/nixpkgs/config.nix
     fi
 
     echo "Do some action in both phases"
